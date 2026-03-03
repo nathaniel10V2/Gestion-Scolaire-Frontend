@@ -77,6 +77,10 @@ ng serve
 Ouvre ensuite http://localhost:4200
  dans ton navigateur.
 
+ ## 🔗 Liens utiles
+
+- **Backend API :** [Gestion Scolaire – Backend](https://github.com/nathaniel10V2/Gestion-Scolaire-Backend)
+
 🏗️ Structure du projet
 src/
 │
