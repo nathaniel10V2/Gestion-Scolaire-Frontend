@@ -45,7 +45,7 @@ Design responsive pour mobile et desktop
 
 Composants Angular réutilisables
 
-Utilisation de SCSS pour le styling
+Utilisation de CSS pour le styling
 
 🛠️ Technologies utilisées
 
@@ -57,7 +57,7 @@ Routing : Angular Router
 
 HTTP Client : Angular HttpClient
 
-Styling : SCSS
+Styling : CSS
 
 Outils : Angular CLI, npm
 
