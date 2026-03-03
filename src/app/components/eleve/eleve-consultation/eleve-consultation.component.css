@@ -1,0 +1,28 @@
+mat-toolbar-row.eleveConsultation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;   
+}
+
+.eleveConsultation-menu {
+    justify-self: end;
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+mat-card {
+    width: 28%;
+}
+
+mat-card-content.donnees-eleve {
+    display: flex;
+    flex-direction: column;
+}

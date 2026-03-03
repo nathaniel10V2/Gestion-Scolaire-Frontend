@@ -1,0 +1,41 @@
+<mat-toolbar color="primary" class="header">
+    <mat-toolbar-row class="eleveList">
+         <h1 class="example-app-name">Gestion des élèves</h1>
+         <div class="eleveList-menu">
+            <a [routerLink]="['/eleve/creation']">
+                <button mat-flat-button>Créer</button>
+            </a>
+         </div>
+    </mat-toolbar-row>
+</mat-toolbar>
+<section>
+    <div class="column">
+        <table mat-table [dataSource]="eleveList" class="mat-elevation-z8">
+            <ng-container matColumnDef="nom">
+                <th mat-header-cell *matHeaderCellDef> Nom </th>
+                <td mat-cell *matCellDef="let element"> {{element.nom}} </td>
+            </ng-container>
+            <ng-container matColumnDef="prenom">
+                <th mat-header-cell *matHeaderCellDef> Prenom </th>
+                <td mat-cell *matCellDef="let element"> {{element.prenom}} </td>
+            </ng-container>
+            <ng-container matColumnDef="adresse">
+                <th mat-header-cell *matHeaderCellDef> Adresse </th>
+                <td mat-cell *matCellDef="let element"> {{element.adresse}} </td>
+            </ng-container>
+            <ng-container matColumnDef="classe">
+                <th mat-header-cell *matHeaderCellDef> Classe </th>
+                <td mat-cell *matCellDef="let element"> 
+                    @if(element.classe) {
+                        {{element.classe.nom}}
+                    }
+                    @else {
+                        Aucune
+                    }
+                </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="colonne"></tr>
+            <tr mat-row (click)="obtenirEleve(row)" *matRowDef="let row; columns: colonne;"></tr>    
+        </table>
+    </div>
+</section>

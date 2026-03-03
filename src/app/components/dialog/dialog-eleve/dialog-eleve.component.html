@@ -1,0 +1,55 @@
+@if(data.tabIndex == 1) {
+    <form class="form" [formGroup]="noteForm">
+        <mat-card>
+            <mat-card-header><h1 mat-dialog-title>Affectation des notes de l'élève</h1></mat-card-header>
+            <mat-card-content class="donnees-eleve" mat-dialog-content>
+                <mat-form-field>
+                    <mat-label>Matieres</mat-label>
+                    <mat-select formControlName="matiere">
+                        @for (matiere of matieres; track matiere) {
+                            <mat-option [value]="matiere">{{matiere.nom}}</mat-option>
+                        }
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Notes</mat-label>
+                    <mat-select formControlName="notes">
+                        @for (valeur of valeurs; track valeur) {
+                            <mat-option [value]="valeur">{{valeur}}</mat-option>
+                        }
+                    </mat-select>
+                </mat-form-field>
+            </mat-card-content>
+            <mat-card-actions mat-dialog-actions>
+                <button mat-flat-button mat-dialog-close (click)="attribuerNote()" [disabled]="noteForm.invalid">Valider</button>
+            </mat-card-actions>
+        </mat-card>      
+    </form>
+}
+@else if(data.tabIndex == 2) {
+    <form class="form" [formGroup]="absenceForm">
+        <mat-card>
+            <mat-card-header><h1 mat-dialog-title>Nouvelle Absence</h1></mat-card-header>
+            <mat-card-content class="donnees-eleve" mat-dialog-content>
+                <mat-form-field>
+                    <mat-label>Durée</mat-label>
+                    <input matInput type="text" formControlName="duree">
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Justifiée</mat-label>
+                    <mat-select formControlName="justifie">
+                      <mat-option [value]="true">Oui</mat-option>
+                      <mat-option [value]="false">Non</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Date</mat-label>
+                    <input type="date" matInput formControlName="date">
+                </mat-form-field>
+            </mat-card-content>
+            <mat-card-actions mat-dialog-actions>
+                <button mat-flat-button mat-dialog-close (click)="donnerAbsence()" [disabled]="absenceForm.invalid">Valider</button>
+            </mat-card-actions>
+        </mat-card>      
+    </form>
+}

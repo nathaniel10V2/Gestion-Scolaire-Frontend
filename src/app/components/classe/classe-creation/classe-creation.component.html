@@ -1,0 +1,20 @@
+<mat-toolbar color="primary" class="header">
+    <mat-toolbar-row class="classeList">
+         <h1 class="example-app-name">Création d'une classe</h1>
+         <div class="classeList-menu">
+            <button mat-flat-button [routerLink]="['/classe']">Retour</button>
+            <button mat-flat-button (click)="creerClasse()" [disabled]="registrationForm.invalid">Valider</button>
+         </div>
+    </mat-toolbar-row>
+</mat-toolbar>
+<form class="form" [formGroup]="registrationForm">
+    <mat-card appearance="outlined">
+        <mat-card-header><h3>Données de la classe</h3></mat-card-header>
+        <mat-card-content class="donnees-classe">
+            <mat-form-field appearance="outline">
+                <mat-label>Nom</mat-label>
+                <input matInput formControlName="nom">
+            </mat-form-field>
+        </mat-card-content>
+    </mat-card>
+</form>

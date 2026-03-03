@@ -1,0 +1,37 @@
+mat-toolbar-row.professeurConsultation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;   
+}
+
+.professeurConsultation-menu {
+    justify-self: end;
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+mat-card {
+    width: 28%;
+}
+
+mat-card-content.donnees-professeur {
+    display: flex;
+    flex-direction: column;
+}
+mat-toolbar.row {
+    display: flex;
+    justify-content: space-around;
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+}

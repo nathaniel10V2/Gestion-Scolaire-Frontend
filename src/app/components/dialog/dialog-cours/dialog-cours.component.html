@@ -1,0 +1,72 @@
+@if (!coursModifie) {
+    <form class="form" [formGroup]="coursForm">
+        <mat-card>
+            <mat-card-header><h1 mat-dialog-title>Affectation emploi du temps</h1></mat-card-header>
+            <mat-card-content class="donnees-classe" mat-dialog-content>           
+                <mat-form-field>
+                    <mat-label>Jour</mat-label>
+                    <mat-select formControlName="jour">
+                        @for(jour of jours; track jour) {
+                            <mat-option [value]="jour">{{jour}}</mat-option>
+                        }
+                    </mat-select>
+                </mat-form-field>                
+                <mat-form-field>
+                    <mat-label>Matiere</mat-label>
+                    <mat-select formControlName="matiere">
+                        @for (matiere of matieres; track matiere) {
+                            <mat-option [value]="matiere">{{matiere.nom}}</mat-option>
+                        }
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Durée</mat-label>
+                    <mat-select formControlName="duree">
+                        @for (periode of duree; track periode) {
+                            <mat-option [value]="periode">{{periode}}</mat-option>
+                        }
+                    </mat-select>
+                </mat-form-field>                
+            </mat-card-content>
+            <mat-card-actions mat-dialog-actions>
+                <button mat-flat-button mat-dialog-close (click)="creerCours()" [disabled]="coursForm.invalid">Valider</button>
+            </mat-card-actions>
+        </mat-card>      
+    </form> 
+}
+@else {
+    <form class="form" [formGroup]="modificationForm">
+        <mat-card>
+            <mat-card-header><h1 mat-dialog-title>Modification du Cours</h1></mat-card-header>
+            <mat-card-content class="donnees-classe" mat-dialog-content>           
+                <mat-form-field>
+                    <mat-label>Jour</mat-label>
+                    <mat-select formControlName="jour">
+                        @for(jour of jours; track jour) {
+                            <mat-option [value]="jour">{{jour}}</mat-option>
+                        }
+                    </mat-select>
+                </mat-form-field>                
+                <mat-form-field>
+                    <mat-label>Matiere</mat-label>
+                    <mat-select formControlName="matiere">
+                        @for (matiere of matieres; track matiere) {
+                            <mat-option [value]="matiere">{{matiere.nom}}</mat-option>
+                        }
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Durée</mat-label>
+                    <mat-select formControlName="duree">
+                        @for (periode of duree; track periode) {
+                            <mat-option [value]="periode">{{periode}}</mat-option>
+                        }
+                    </mat-select>
+                </mat-form-field>                
+            </mat-card-content>
+            <mat-card-actions mat-dialog-actions>
+                <button mat-flat-button mat-dialog-close (click)="modifierCours()" [disabled]="modificationForm.invalid">Valider</button>
+            </mat-card-actions>
+        </mat-card>      
+    </form>    
+}   

@@ -1,0 +1,47 @@
+.header {
+    background-color: lightgray;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    width: 100%;
+}
+
+mat-toolbar-row.classeList {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;   
+}
+
+.classeList-menu {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    column-gap: 10px;
+    padding: 10px;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+mat-card {
+    width: 28%;
+}
+
+mat-card-content.donnees-classe {
+    display: flex;
+    flex-direction: column;
+}

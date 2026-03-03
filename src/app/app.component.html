@@ -1,0 +1,51 @@
+<mat-toolbar color="primary" class="example-toolbar">
+   <mat-toolbar-row>
+        <button mat-icon-button (click)="open = !open"><mat-icon>menu</mat-icon></button>
+        <h1 class="example-app-name">Gestion d'un établissement scolaire</h1>
+   </mat-toolbar-row>
+</mat-toolbar>
+<mat-toolbar>
+    <mat-toolbar-row class="raccourci">
+        <button mat-flat-button [routerLink]="['/matiere/creation']" routerLinkActive='active'>
+            <mat-icon>books</mat-icon>
+            <span>Créer Matière</span>
+        </button>
+        <button mat-flat-button [routerLink]="['/professeur/creation']" routerLinkActive='active'>
+            <mat-icon>person</mat-icon>
+            <span>Créer Professeur</span>
+        </button>
+        <button mat-flat-button [routerLink]="['/classe/creation']" routerLinkActive='active'>
+            <mat-icon>books</mat-icon>
+            <span>Créer Classe</span>
+        </button>
+        <button mat-flat-button [routerLink]="['/eleve/creation']" routerLinkActive='active'>
+            <mat-icon>person</mat-icon>
+            <span>Créer Elève</span>
+        </button>                        
+    </mat-toolbar-row>
+ </mat-toolbar>
+<mat-sidenav-container class="container">
+    <mat-sidenav class="navigation-bar" mode="side" [opened]="open">
+       <mat-nav-list>
+            <a mat-list-item [routerLink]="['/matiere']" routerLinkActive='active'>
+                <mat-icon>books</mat-icon>
+                <span>Matières</span>
+            </a>
+            <a mat-list-item [routerLink]="['/professeur']" routerLinkActive='active'>
+                <mat-icon>person</mat-icon>
+                <span>Professeurs</span>
+            </a>
+            <a mat-list-item [routerLink]="['/classe']" routerLinkActive='active'>
+                <mat-icon>books</mat-icon>
+                <span>Classes</span>
+            </a>
+            <a mat-list-item [routerLink]="['/eleve']" routerLinkActive='active'>
+                <mat-icon>person</mat-icon>
+                <span>Elèves</span>
+            </a>
+       </mat-nav-list> 
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

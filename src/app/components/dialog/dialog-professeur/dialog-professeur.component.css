@@ -1,0 +1,35 @@
+.form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.form-dialog {
+    display: flex;
+    flex-direction: column;
+    width: 98%;
+    height: 98%;
+}
+
+.dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 100%;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+mat-card.prof-classes {
+    width: 50%;
+    margin-left: 5px;
+}
+
+mat-card-content.donnees-professeur {
+    display: flex;
+    flex-direction: column;
+}

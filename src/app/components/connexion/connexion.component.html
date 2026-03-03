@@ -1,0 +1,33 @@
+<section>
+    @if(estInscrit) {
+        <form class="form" [formGroup]="connexionForm">
+            <h2>Connexion</h2>
+            <h3>Email</h3>
+            <mat-form-field appearance="outline">
+                <input matInput formControlName="email">
+            </mat-form-field>
+            <h3>Mot de Passe</h3>
+            <mat-form-field appearance="outline">
+                <input matInput formControlName="motdepasse">
+            </mat-form-field>
+            <button mat-flat-button>Valider</button>
+        </form>
+    } 
+    @else {
+        <form class="form" [formGroup]="inscriptionForm">
+            <h2>Inscription</h2>
+            <h3>Email</h3>
+            <mat-form-field appearance="outline">
+                <input matInput formControlName="email">
+            </mat-form-field>
+            <h3>Mot de Passe</h3>
+            <mat-form-field appearance="outline">
+                <input matInput formControlName="motdepasse">
+            </mat-form-field>    
+            <h3>Confirmer Mot de Passe</h3>
+            <mat-form-field appearance="outline">
+                <input matInput formControlName="confirmationMdp">
+            </mat-form-field>    
+        </form>
+    }
+</section>

@@ -1,0 +1,14 @@
+.form {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+mat-card-content.donnees-eleve {
+    display: flex;
+    flex-direction: column;
+}

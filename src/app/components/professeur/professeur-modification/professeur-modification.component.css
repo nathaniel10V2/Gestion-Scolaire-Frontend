@@ -1,0 +1,38 @@
+.header {
+    background-color: lightgray;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+mat-toolbar-row.professeurList {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;   
+}
+
+.professeurList-menu {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    column-gap: 10px;
+    padding: 10px;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+mat-card {
+    width: 28%;
+}
+
+mat-card-content.donnees-professeur {
+    display: flex;
+    flex-direction: column;
+}
